@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.SubscriptionEntry">
+
+    <ImageView
+        android:id="@+id/mycustomers_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_left_arrow" />
+
+    <ImageView
+        android:id="@+id/pug"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/pug" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mycustomers_back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/lefttab_dark"
+            android:text="Subscription"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/subscription_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/righttab"
+            android:text="Customers"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pug"
+        android:layout_below="@+id/linear1"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <EditText
+                    android:id="@+id/subs_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:hint="Customer Name"
+                    android:inputType="text"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <EditText
+                    android:id="@+id/subs_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:hint="Customer Contact Number"
+                    android:inputType="text"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <EditText
+                    android:id="@+id/subs_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:hint="Customer Address"
+                    android:inputType="text"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <EditText
+                    android:id="@+id/subs_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:hint="Customer Email Id"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <Spinner
+                    android:id="@+id/subs_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:entries="@array/plans"
+                    android:paddingLeft="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <Spinner
+                    android:id="@+id/subs_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:entries="@array/days"
+                    android:paddingLeft="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <EditText
+                    android:id="@+id/subs_paid_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:hint="Amount Paid"
+                    android:inputType="number"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/border">
+
+                <EditText
+                    android:id="@+id/subs_confirm_paid_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:hint="Re-Enter Paid Amount"
+                    android:inputType="number"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/primaryText" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/subs_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Submit"
+                android:textColor="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/progressBarSubs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

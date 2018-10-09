@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AgentApp-GoodBoy</string>
+
+    <string-array name="plans">
+        <item>Subscription Plans</item>
+        <item>500 gm</item>
+        <item>1 kg</item>
+        <item>1.5 kg</item>
+        <item>2 kg</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>Duration</item>
+        <item>3 days (Trail)</item>
+        <item>30 days</item>
+    </string-array>
+
+</resources>

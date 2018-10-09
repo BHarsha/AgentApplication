@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.Wallet">
+
+    <ImageView
+        android:id="@+id/wallet_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_left_arrow" />
+
+    <ImageView
+        android:id="@+id/mycustomer"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/wallet" />
+
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/walletpointsbalance_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="80dp" />
+
+            <TextView
+                android:id="@+id/walletpointsredeemed_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="00"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="80dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="Balance Amount"
+                android:textAlignment="center"
+                android:textColor="@color/primaryText"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="Redeemed Amount"
+                android:textAlignment="center"
+                android:textColor="@color/primaryText"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/table"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorPrimary"
+        android:text="Redeem"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
